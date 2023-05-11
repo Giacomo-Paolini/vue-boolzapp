@@ -1,0 +1,64 @@
+body {
+    background: no-repeat linear-gradient(#009688 20%, #d2dbdb 20% 80%);
+    height: 100vh;
+}
+
+#personalAvatar {
+    border-radius: 50%;
+    object-fit: contain;
+    padding: 1rem;
+}
+
+.headerLeft {
+    height: 80px;
+    background-color: #EAEAEA;
+}
+
+.mainLeft {
+    height: 80px;
+    background-color: #8EDAFC;
+}
+
+/********** SEARCH BAR **********/
+
+.form{
+    position: relative;
+}
+
+.form .fa-search{
+    position: absolute;
+    top:20px;
+    left: 20px;
+    color: #9ca3af;
+}
+
+.form-input{
+    height: 55px;
+    text-indent: 33px;
+    border-radius: 10px;
+    border: 0px solid rgba(0,0,0,.125);
+}
+
+.form-input:focus{
+    box-shadow: none;
+    border:none;
+}
+
+/********** CONTACTS **********/
+
+.box {
+    height: calc(80vh - 215px);
+    overflow-y: auto;
+}
+
+.contacts {
+    height: 100px;
+    object-fit: contain;
+    background-color: #FFFFFF;
+}
+
+.contacts img {
+    border-radius: 50%;
+    object-fit: contain;
+    padding: 1rem;
+}
