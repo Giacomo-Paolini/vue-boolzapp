@@ -3,20 +3,36 @@ body {
     height: 100vh;
 }
 
+/********** HEADER **********/
+
 #personalAvatar {
     border-radius: 50%;
-    object-fit: contain;
+    /* object-fit: contain; */
     padding: 1rem;
 }
+
+/* LEFT SIDE */
 
 .headerLeft {
     height: 80px;
     background-color: #EAEAEA;
 }
 
-.mainLeft {
+.notification {
     height: 80px;
     background-color: #8EDAFC;
+}
+
+/* RIGHT SIDE */
+
+.headerRight {
+    height: 80px;
+    background-color: #EAEAEA;
+}
+
+.mainRight {
+    height: calc(80vh - 80px);
+    background-image: url('../img/mine.jpg');
 }
 
 /********** SEARCH BAR **********/
@@ -47,7 +63,7 @@ body {
 /********** CONTACTS **********/
 
 .box {
-    height: calc(80vh - 215px);
+    height: calc(80vh - 135px);
     overflow-y: auto;
 }
 
@@ -61,4 +77,11 @@ body {
     border-radius: 50%;
     object-fit: contain;
     padding: 1rem;
+}
+
+/********** FOOTER **********/
+
+footer {
+    height: 80px;
+    background-color: white;
 }
