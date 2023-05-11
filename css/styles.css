@@ -5,32 +5,31 @@ body {
 
 /********** HEADER **********/
 
-#personalAvatar {
+#my-personal-avatar {
     border-radius: 50%;
-    /* object-fit: contain; */
     padding: 1rem;
 }
 
 /* LEFT SIDE */
 
-.headerLeft {
+.my-header-left {
     height: 80px;
     background-color: #EAEAEA;
 }
 
-.notification {
+.my-notification {
     height: 80px;
     background-color: #8EDAFC;
 }
 
 /* RIGHT SIDE */
 
-.headerRight {
+.my-header-right {
     height: 80px;
     background-color: #EAEAEA;
 }
 
-.mainRight {
+.my-main-right {
     height: calc(80vh - 80px);
     background-image: url('../img/mine.jpg');
 }
@@ -62,21 +61,21 @@ body {
 
 /********** CONTACTS **********/
 
-.box {
+.my-box {
+    background-color: #FFFFFF;
     height: calc(80vh - 135px);
     overflow-y: auto;
 }
 
-.contacts {
-    height: 100px;
-    object-fit: contain;
+.my-contacts {
+    height: 110px;
     background-color: #FFFFFF;
 }
 
-.contacts img {
+.my-contacts img {
     border-radius: 50%;
     object-fit: contain;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 /********** FOOTER **********/
