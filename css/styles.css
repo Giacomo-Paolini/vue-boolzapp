@@ -17,9 +17,9 @@ body {
     background-color: #EAEAEA;
 }
 
-.my-notification {
-    height: 80px;
-    background-color: #8EDAFC;
+.my-header-left i {
+    color: #B1B1B1;
+    font-size: 1.5rem;
 }
 
 /* RIGHT SIDE */
@@ -29,9 +29,32 @@ body {
     background-color: #EAEAEA;
 }
 
+.my-header-right i {
+    color: #B1B1B1;
+    font-size: 1.5rem;
+}
+
 .my-main-right {
     height: calc(80vh - 80px);
     background-image: url('../img/mine.jpg');
+}
+
+/********** AZURE **********/
+
+.my-notification {
+    height: 80px;
+    background-color: #8EDAFC;
+}
+
+.my-bg-notification {
+    background-color: white;
+    aspect-ratio: 1/1;
+    width: 3rem;
+    height: 3rem;
+}
+
+.my-notification i {
+    font-size: 1.5rem;
 }
 
 /********** SEARCH BAR **********/
