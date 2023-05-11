@@ -3,6 +3,10 @@ body {
     height: 100vh;
 }
 
+i {
+    cursor: pointer;
+}
+
 /********** HEADER **********/
 
 #my-personal-avatar {
@@ -53,6 +57,10 @@ body {
     height: 3rem;
 }
 
+.my-link-color {
+    color: #9a9c9e;
+}
+
 .my-notification i {
     font-size: 1.5rem;
 }
@@ -82,6 +90,9 @@ body {
     border:none;
 }
 
+.my-border {
+    border-bottom: 0.05px solid #f0f0f0;
+}
 /********** CONTACTS **********/
 
 .my-box {
@@ -91,14 +102,18 @@ body {
 }
 
 .my-contacts {
-    height: 110px;
+    height: 85px;
     background-color: #FFFFFF;
+    border-bottom: 0.05px solid #f0f0f0;
 }
 
 .my-contacts img {
+    width: 70px;
     border-radius: 50%;
-    object-fit: contain;
-    padding: 2rem;
+}
+
+.my-font-small-color {
+    color: #B1B1B1;
 }
 
 /********** FOOTER **********/
@@ -106,4 +121,9 @@ body {
 footer {
     height: 80px;
     background-color: white;
+}
+
+footer i {
+    color: #B1B1B1;
+    font-size: 1.5rem;
 }
