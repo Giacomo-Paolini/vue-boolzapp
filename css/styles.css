@@ -42,9 +42,26 @@ i {
     font-size: 1.5rem;
 }
 
+.my-conversation {
+    padding: 2rem;
+    overflow-y: hidden;
+}
+
 .my-main-right {
     height: calc(80vh - 80px);
     background-image: url('../img/mine.jpg');
+}
+
+.my-sent-message {
+    background-color: lightgreen;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.my-received-message {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 15px;
 }
 
 /********** AZURE **********/
