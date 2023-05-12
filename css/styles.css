@@ -49,7 +49,7 @@ i {
 .my-main-right {
     height: calc(80vh - 80px);
     background-image: url('../img/mine.jpg');
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 .my-sent-message {
