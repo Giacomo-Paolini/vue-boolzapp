@@ -173,6 +173,6 @@ createApp ({
     methods: {
         selectUser(i) {
             this.currentChat = i;
-        }
+        },
     }
 }).mount('#app')
