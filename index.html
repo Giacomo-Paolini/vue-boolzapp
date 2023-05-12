@@ -55,13 +55,13 @@
                     <!-- CONTACTS -->
                     <section class="container my-box">
                         <div class="row">
-                            <div v-for="(contact, i) in contacts" class="my-contacts d-flex">
+                            <div v-for="(contact, i) in contacts" @click="selectUser(i)" class="my-contacts d-flex">
                                 <div class="col-10 d-flex align-items-center">
                                     <div class="col-3">
-                                        <img :src="contacts[i].avatar" :alt="contacts[i].name" class="img-fluid">
+                                        <img :src="contact.avatar" :alt="contact.name" class="img-fluid">
                                     </div>
                                     <div class="col-7 d-flex flex-column justify-content-center">
-                                        <span class="fw-normal">{{contacts[i].name}}</span>
+                                        <span class="fw-normal">{{contact.name}}</span>
                                         <span class="my-font-small-color small">Ultimo messaggio inviato</span>
                                     </div>
                                 </div>
@@ -89,13 +89,16 @@
                             <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
                         </div>
                     </section>
+                    <!-- MESSAGES -->
                     <section class="my-main-right">
                         <div class="my-conversation">
-                            <div class="p-3 d-flex justify-content-end">
-                                <span class="my-sent-message">ciao</span> 
-                            </div>
-                            <div class="p-3 d-flex justify-content-start">
-                                <span class="my-received-message">ciao</span>
+                            <div v-for="(message, i) in contacts[currentChat].messages">
+                                <div v-if="message.status === 'sent'" class="text-dark d-flex justify-content-end">
+                                    <span class="p-3 mb-2 my-sent-message">{{message.message}}</span> 
+                                </div>
+                                <div v-else class="text-dark d-flex justify-content-start">
+                                    <span class="p-3 mb-2 my-received-message">{{message.message}}</span>
+                                </div>
                             </div>
                         </div>
                     </section>

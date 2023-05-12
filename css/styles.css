@@ -56,12 +56,14 @@ i {
     background-color: #D5F9BA;
     padding: 1rem;
     border-radius: 15px;
+    max-width: 50%;
 }
 
 .my-received-message {
     background-color: white;
     padding: 1rem;
     border-radius: 15px;
+    max-width: 50%;
 }
 
 /********** AZURE **********/
@@ -126,6 +128,11 @@ i {
     height: 85px;
     background-color: #FFFFFF;
     border-bottom: 0.05px solid #e7e7e7;
+    cursor: pointer;
+}
+
+.my-contacts:hover {
+    background-color: #E9EBEB;
 }
 
 .my-contacts img {
