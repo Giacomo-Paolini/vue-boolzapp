@@ -44,12 +44,12 @@ i {
 
 .my-conversation {
     padding: 2rem;
-    overflow-y: hidden;
 }
 
 .my-main-right {
     height: calc(80vh - 80px);
     background-image: url('../img/mine.jpg');
+    overflow-y: hidden;
 }
 
 .my-sent-message {
