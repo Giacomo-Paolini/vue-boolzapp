@@ -21,6 +21,10 @@ i {
     background-color: #EAEAEA;
 }
 
+.my-container-border {
+    border-right: 0.05px solid #e7e7e7;
+}
+
 .my-header-left i {
     color: #B1B1B1;
     font-size: 1.5rem;
@@ -91,7 +95,7 @@ i {
 }
 
 .my-border {
-    border-bottom: 0.05px solid #f0f0f0;
+    border-bottom: 0.05px solid #e7e7e7;
 }
 /********** CONTACTS **********/
 
@@ -104,7 +108,7 @@ i {
 .my-contacts {
     height: 85px;
     background-color: #FFFFFF;
-    border-bottom: 0.05px solid #f0f0f0;
+    border-bottom: 0.05px solid #e7e7e7;
 }
 
 .my-contacts img {
