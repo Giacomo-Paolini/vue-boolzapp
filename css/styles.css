@@ -148,6 +148,10 @@ i {
     color: #B1B1B1;
 }
 
+.my-active {
+    background-color: #E9EBEB;
+}
+
 /********** FOOTER **********/
 
 footer {

@@ -4,6 +4,7 @@ createApp ({
     data() {
         return {
             currentChat: 0,
+            activeClass: "background-color: #E9EBEB",
             search: "",
             personalMessage: "",
             contacts: [
@@ -186,5 +187,10 @@ createApp ({
                 this.personalMessage = "";
             }
         },
+        active(i) {
+            if (this.currentChat == i) {
+                return "my-active"
+            }
+        }
     },
 }).mount('#app')

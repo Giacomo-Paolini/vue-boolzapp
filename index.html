@@ -55,7 +55,7 @@
                     <!-- CONTACTS -->
                     <section class="container my-box">
                         <div class="row">
-                            <div v-for="(contact, i) in contacts.filter(c=>c.name.toLowerCase().startsWith(search.toLowerCase()))" @click="selectUser(i)" class="my-contacts d-flex">
+                            <div v-for="(contact, i) in contacts.filter(c=>c.name.toLowerCase().startsWith(search.toLowerCase()))" @click="selectUser(i)" class="my-contacts d-flex" :class="active(i)">
                                 <div class="col-10 d-flex align-items-center">
                                     <div class="col-3">
                                         <img :src="contact.avatar" :alt="contact.name" class="img-fluid">
