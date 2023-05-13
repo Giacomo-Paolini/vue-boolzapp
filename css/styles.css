@@ -57,6 +57,8 @@ i {
     padding: 1rem;
     border-radius: 15px;
     max-width: 50%;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .my-received-message {
@@ -64,6 +66,8 @@ i {
     padding: 1rem;
     border-radius: 15px;
     max-width: 50%;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 /********** AZURE **********/
