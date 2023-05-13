@@ -111,7 +111,7 @@
                                 </div>
                                 <div class="col-10">
                                     <div class="form">
-                                        <input type="text" class="form-control" aria-label="Default" placeholder="Scrivi un messaggio" aria-describedby="inputGroup-sizing-default">
+                                        <input v-model="personalMessage" @keyup.enter="customMessage()" type="text" class="form-control" aria-label="Default" placeholder="Scrivi un messaggio" aria-describedby="inputGroup-sizing-default">
                                     </div>       
                                 </div>
                                 <div class="col-1 d-flex justify-content-center align-items-center">

@@ -4,6 +4,7 @@ createApp ({
     data() {
         return {
             currentChat: 0,
+            personalMessage: "",
             contacts: [
                 {
                     name: 'Michele',
@@ -165,15 +166,24 @@ createApp ({
                             status: 'received'
                         }
                     ],
-                }
-            ]
-            
+                },
+            ],
         }
     },
     methods: {
         selectUser(i) {
             this.currentChat = i;
-            console.log(i)
+        },
+        customMessage() {
+            if (this.personalMessage.length > 0) {
+                const newMessage = {
+                    date: "10/01/2020 15:51:00",
+                    message: this.personalMessage,
+                    status: "sent",
+                };
+                this.contacts[this.currentChat].messages.push(newMessage);
+                this.personalMessage = "";
+            }
         },
     }
 }).mount('#app')
