@@ -4,6 +4,7 @@ createApp ({
     data() {
         return {
             currentChat: 0,
+            search: "",
             personalMessage: "",
             contacts: [
                 {
@@ -185,5 +186,5 @@ createApp ({
                 this.personalMessage = "";
             }
         },
-    }
+    },
 }).mount('#app')

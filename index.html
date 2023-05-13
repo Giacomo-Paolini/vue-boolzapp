@@ -47,15 +47,15 @@
                             <div class="col-12 bg-white my-border">
                                 <div class="form">
                                     <i class="fa fa-search"></i>
-                                    <input type="text" class="form-control form-input" placeholder="Cerca o inizia una nuova chat">
-                                </div>                     
+                                    <input v-model="search" type="text" class="form-control form-input" placeholder="Cerca o inizia una nuova chat">
+                                </div>
                             </div>
                         </div>
                     </section>
                     <!-- CONTACTS -->
                     <section class="container my-box">
                         <div class="row">
-                            <div v-for="(contact, i) in contacts" @click="selectUser(i)" class="my-contacts d-flex">
+                            <div v-for="(contact, i) in contacts.filter(c=>c.name.toLowerCase().startsWith(search.toLowerCase()))" @click="selectUser(i)" class="my-contacts d-flex">
                                 <div class="col-10 d-flex align-items-center">
                                     <div class="col-3">
                                         <img :src="contact.avatar" :alt="contact.name" class="img-fluid">
