@@ -174,16 +174,31 @@ createApp ({
     methods: {
         selectUser(i) {
             this.currentChat = i;
+            console.log(this.contacts[this.currentChat]);
         },
         customMessage() {
+            const newMessage = {
+                date: "10/01/2020 15:51:00",
+                message: this.personalMessage,
+                status: "sent",
+            };
+
             if (this.personalMessage.length > 0) {
-                const newMessage = {
-                    date: "10/01/2020 15:51:00",
-                    message: this.personalMessage,
-                    status: "sent",
-                };
                 this.contacts[this.currentChat].messages.push(newMessage);
                 this.personalMessage = "";
+            }
+
+            const newMessageReceived = {
+                date: "10/01/2020 15:51:00",
+                message: "ok",
+                status: "received",
+            };
+
+            if (newMessage.message !== "") {
+                let myTimeout = setTimeout(() => {
+                    this.contacts[this.currentChat].messages.push(newMessageReceived);
+                }, 1000);
+                return myTimeout;
             }
         },
         active(i) {
