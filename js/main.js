@@ -174,7 +174,6 @@ createApp ({
     methods: {
         selectUser(i) {
             this.currentChat = i;
-            console.log(this.contacts[this.currentChat]);
         },
         customMessage() {
             const newMessage = {
