@@ -204,6 +204,12 @@ createApp ({
             if (this.currentChat == i) {
                 return "my-active"
             }
-        }
+        },
+    },
+    computed: {
+        filteredContacts() {
+            const searchTerm = this.search.toLowerCase();
+            return this.contacts.filter(contact => contact.name.toLowerCase().startsWith(searchTerm));
+        },
     },
 }).mount('#app')
