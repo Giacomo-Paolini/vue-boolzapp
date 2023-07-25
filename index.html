@@ -47,7 +47,7 @@
                             <div class="col-12 bg-white my-border">
                                 <div class="form">
                                     <i class="fa fa-search"></i>
-                                    <input v-model="search" type="text" class="form-control form-input" placeholder="Cerca o inizia una nuova chat">
+                                    <input @keyup="filterContacts()" v-model="search" type="text" class="form-control form-input" placeholder="Cerca o inizia una nuova chat">
                                 </div>
                             </div>
                         </div>
@@ -55,20 +55,22 @@
                     <!-- CONTACTS -->
                     <section class="container my-box">
                         <div class="row">
-                            <div v-for="(contact, i) in filteredContacts" @click="selectUser(i)" class="my-contacts d-flex" :class="active(i)">
-                                <div class="col-10 d-flex align-items-center">
-                                    <div class="col-3">
-                                        <img :src="contact.avatar" :alt="contact.name" class="img-fluid">
+                            <template v-for="(contact, i) in contacts" >
+                                <div v-if="contact.visible" @click="selectUser(i)" class="my-contacts d-flex" :class="active(i)">
+                                    <div class="col-10 d-flex align-items-center">
+                                        <div class="col-3">
+                                            <img :src="contact.avatar" :alt="contact.name" class="img-fluid">
+                                        </div>
+                                        <div class="col-7 d-flex flex-column justify-content-center">
+                                            <span class="fw-normal">{{contact.name}}</span>
+                                            <span class="my-font-small-color small">{{contact.messages[contact.messages.length - 1].message}}</span>
+                                        </div>
                                     </div>
-                                    <div class="col-7 d-flex flex-column justify-content-center">
-                                        <span class="fw-normal">{{contact.name}}</span>
-                                        <span class="my-font-small-color small">{{contact.messages[contact.messages.length - 1].message}}</span>
+                                    <div class="col-2 d-flex justify-content-end align-items-center">
+                                        <span class="my-font-small-color small">{{contact.messages[contact.messages.length - 1].date}}</span>
                                     </div>
                                 </div>
-                                <div class="col-2 d-flex justify-content-end align-items-center">
-                                    <span class="my-font-small-color small">{{contact.messages[contact.messages.length - 1].date}}</span>
-                                </div>
-                            </div>
+                            </template>                            
                         </div>
                     </section>
                 </div>

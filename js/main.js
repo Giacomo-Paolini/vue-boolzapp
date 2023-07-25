@@ -205,11 +205,15 @@ createApp ({
                 return "my-active"
             }
         },
-    },
-    computed: {
-        filteredContacts() {
+        filterContacts() {
             const searchTerm = this.search.toLowerCase();
-            return this.contacts.filter(contact => contact.name.toLowerCase().startsWith(searchTerm));
+            this.contacts.forEach(contact => {
+                if (contact.name.toLowerCase().startsWith(searchTerm)) {
+                    contact.visible = true;
+                } else {
+                    contact.visible = false;
+                }
+            });
         },
     },
 }).mount('#app')
